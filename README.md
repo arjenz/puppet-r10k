@@ -114,7 +114,7 @@ git_deploy_key { 'add_deploy_key_to_puppet_control':
 }
 ```
 A simple example of creating an ssh private key would use an exec to call `yes y | ssh-keygen -t dsa -C "r10k" -f /root/.ssh/id_dsa -q -N ''`.
-The example above shows using `git_deploy_key` which would deploy that key to the remote git server via its api. This is often required in the programtic creation of compile masters.
+The example above shows using `git_deploy_key` which would deploy that key to the remote git server via its api. This is often required in the programmatic creation of compile masters.
 
 Given r10k will likely be downloading your modules, often on the first server
 it's run on, you will have to `puppet apply` this module to bootstrap this
